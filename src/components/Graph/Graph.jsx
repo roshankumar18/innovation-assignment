@@ -6,7 +6,7 @@ import LineChart from '../LineChart/LineChart'
 const Graph = () => {
   const [result,setResult] = useState(null)
   useEffect(()=>{
-    fetch('http://127.0.0.1:3001/').then(res=>res.json())
+    fetch('http://localhost:3001/').then(res=>res.json())
       .then((res)=>setResult(res))
       .catch(err=>console.log(err))
     

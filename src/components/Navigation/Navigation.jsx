@@ -33,7 +33,7 @@ const Navigation = () => {
                                 <img src={item.icon} alt={`${item}-item`}/>
                             </div>
                             <div className='item-text'>{item.name}</div>
-                            {item.name=='Customers' && 
+                            {item.name==='Customers' && 
                             <div style={{marginLeft:'auto',marginRight: '20px' ,display:'flex',alignItems:'center'}}>
                                 <img src={Closed} alt='closed'/>
                                 </div>}

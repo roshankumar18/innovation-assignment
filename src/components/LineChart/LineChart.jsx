@@ -1,6 +1,5 @@
 import Chart from "chart.js/auto";
 import { CategoryScale, Filler, LineElement, LinearScale, PointElement } from "chart.js";
-import { useState } from "react";
 import 'chartjs-plugin-annotation'
 import { Line } from "react-chartjs-2";
 import 'chartjs-adapter-moment'
@@ -33,7 +32,53 @@ export default function LineChart({data}) {
         
       ],
     };
+    //options
+    const options={
+            
+        plugins:{
+            legend:{
+                display:false
+            },
+        },
+        maintainAspectRatio:false,
+        scales:{
+            
+            x:{
+                type:'time',
+                time:{
+                    unit:"year"
+                },
+                min:'2016-07-08 06:00:00',
+                ticks:{
+                    color:'#7D7D7D',
+                    font:{
+                        size:'10px',
+                        weight:500,
+                        lineHeight:'12.1px',
 
+                    }
+                },
+                grid:{
+                    color:'#D9D9D9'
+                }
+            },
+            y:{
+                grid:{
+                    color:'#D9D9D9'
+                }
+            }
+        },
+        elements:{
+            point:{
+                pointStyle:false
+            },
+            line:{
+                borderDash:[3,3]
+            }
+        },
+    
+    
+}
    
  
   return (
@@ -41,64 +86,8 @@ export default function LineChart({data}) {
      
       <Line 
         data={chartData}
-        
-        
         height={'160px'}
-        options={{
-            
-            plugins:{
-                legend:{
-                    display:false
-                },
-            },
-            // responsive:true,
-            maintainAspectRatio:false,
-            scales:{
-                
-                x:{
-                    
-                    // offset:true,
-                    type:'time',
-                    time:{
-                        unit:"year"
-                    },
-                    min:'2016-07-08 06:00:00',
-                    ticks:{
-                        color:'#7D7D7D',
-                        font:{
-                            size:'10px',
-                            weight:500,
-                            lineHeight:'12.1px',
-
-                        }
-                    },
-                    grid:{
-                        color:'#D9D9D9'
-                    }
-                },
-                y:{
-                    grid:{
-                        color:'#D9D9D9'
-                    }
-                }
-            },
-            elements:{
-                point:{
-                    pointStyle:false
-                },
-                line:{
-                    borderDash:[3,3]
-                }
-            },
-            // layout:{
-            //     padding:{
-            //         // left:20
-            //     }
-            // }
-        }
-        
-    }
-    
+        options={options}
       />
     </div>
   );
