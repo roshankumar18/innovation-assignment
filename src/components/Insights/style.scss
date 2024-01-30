@@ -1,0 +1,47 @@
+.revenue{
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding:1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    height: 16.31rem;
+    .revenue-text{
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+    .increment{
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 3.625rem;
+        color:#131313;
+        letter-spacing: -2px;
+    }
+    .text{
+        font-weight: 400;
+        color: #454545;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        letter-spacing: -0.3px;
+    }
+    .report{
+        padding:3.5rem 0 0 0;
+        display: flex;
+        align-items: center;
+        gap:4px;
+        p{
+            color: #734A00;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1rem;
+            letter-spacing: -0.3px;
+        }
+        img{
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+
+    }
+}

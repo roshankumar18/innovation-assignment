@@ -1,0 +1,41 @@
+.graph{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 256px;
+    gap:0.5rem;
+    .header{
+        width: 30.75rem;
+        padding-bottom: 1rem;
+        display: flex;
+        
+        justify-content: space-between;
+        p{
+            // font-family: Inter;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            letter-spacing: -0.2px;
+            
+        }
+        .filter{
+            display: flex;
+            align-items: center;
+            gap:0.25rem;
+            .icon{
+                display: flex;
+                text-align: center;
+                
+                img{
+                    height: 0.875rem;
+                    width: 0.875rem;
+                    
+                }
+            }
+           
+        }
+        
+    }
+}
