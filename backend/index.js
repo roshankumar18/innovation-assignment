@@ -1,12 +1,11 @@
 const express = require('express')
 const path = require('path')
-
-
+require('dotenv').config()
 const { lttbDownsample } = require('./lltb')
 const app = express()
 var cors = require('cors')
 const { parseCSVtoJSON } = require('./parser')
-const port =3001
+const port =process.env.PORT || 3001
 app.use(cors()) 
 app.use(express.static('public'))
 
