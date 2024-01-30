@@ -6,15 +6,14 @@ import LineChart from '../LineChart/LineChart'
 const Graph = () => {
   const [result,setResult] = useState(null)
   useEffect(()=>{
-    fetch('http://localhost:3001/').then(res=>res.json())
+    fetch('https://innovation-assignment-server.vercel.app/').then(res=>res.json())
       .then((res)=>setResult(res))
       .catch(err=>console.log(err))
     
     
   },[])
-  useEffect(()=>{
-    console.log(result)
-  },[result])
+
+
 
   return (
     <div className='graph'>
